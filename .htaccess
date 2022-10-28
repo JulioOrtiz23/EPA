@@ -1,0 +1,2 @@
+#cambiar pagina de inicio por defecto
+DirectoryIndex Public/index.php
