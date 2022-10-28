@@ -7,16 +7,17 @@
         rel="stylesheet">
     <title>-EPA-</title>
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/EPA/Web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../Web/css/fontawesome.css">
-    <link rel="stylesheet" href="../Web/css/templatemo-cyborg-gaming.css">
-    <link rel="stylesheet" href="../Web/css/owl.css">
-    <link rel="stylesheet" href="../Web/css/animate.css">
+    <link rel="stylesheet" href="http://localhost/EPA/Web/css/fontawesome.css">
+    <link rel="stylesheet" href="http://localhost/EPA/Web/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="http://localhost/EPA/Web/css/owl.css">
+    <link rel="stylesheet" href="http://localhost/EPA/Web/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../Web/css/style.css">
+    <link rel="stylesheet" href="http://localhost/EPA/Web/css/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-    <script src="../Web/js/login.js"></script>
+    <script src="http://localhost/EPA/Web/js/login.js"></script>
     <!-- style -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

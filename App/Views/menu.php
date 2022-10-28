@@ -5,8 +5,8 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="../Public/index.php" class="logo">
-                        <img src="../Web/images/Logo_EPA.png" alt="">
+                    <a href="http://localhost/EPA/Public/index.php" class="logo">
+                        <img src="http://localhost/EPA/Web/images/Logo_EPA.png" alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->
@@ -21,7 +21,7 @@
                     <!-- ***** Menu Start ***** -->
 
                     <ul class="nav">
-                        <li><a class="btn btn-light" href="../Public/index.php">Inicio</a></li>
+                        <li><a class="btn btn-light" href="http://localhost/EPA/Public/index.php">Inicio</a></li>
 
                         <div class="btn-group">
                             <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown"
@@ -30,13 +30,13 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"
                                 onclick="javascript:console.log( $(event.target).data('mode'))">
-                                <a class="dropdown-item" href="../Public/agregarProducto.php" data-mode="mode1"
+                                <a class="dropdown-item" href="http://localhost/EPA/Public/agregarProducto.php" data-mode="mode1"
                                     data-dir="/home">Ingreso de producto</a>
-                                <a class="dropdown-item " href="../Public/salidaProducto.php" data-mode="mode2"
+                                <a class="dropdown-item " href="http://localhost/EPA/Public/salidaProducto.php" data-mode="mode2"
                                     data-dir="/foo">Salida de produccto</a>
-                                <a class="dropdown-item " href="../Public/categoria.php" data-mode="mode2"
+                                <a class="dropdown-item " href="http://localhost/EPA/Public/categoria.php" data-mode="mode2"
                                     data-dir="/bar">Categoria</a>
-                                <a class="dropdown-item " href="../Public/marca.php" data-mode="mode2" data-dir="/">Marca</a>
+                                <a class="dropdown-item " href="http://localhost/EPA/Public/marca.php" data-mode="mode2" data-dir="/">Marca</a>
                             </div>
                         </div>
 
@@ -47,9 +47,9 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"
                                 onclick="javascript:console.log( $(event.target).data('mode'))">
-                                <a class="dropdown-item" href="../Public/reporteIngresoProducto.php" data-mode="mode1"
+                                <a class="dropdown-item" href="http://localhost/EPA/Public/reporteIngresoProducto.php" data-mode="mode1"
                                     data-dir="/home">Reporte de Ingreso</a>
-                                <a class="dropdown-item " href="../Public/reporteSalidaProducto.php" data-mode="mode2"
+                                <a class="dropdown-item " href="http://localhost/EPA/Public/reporteSalidaProducto.php" data-mode="mode2"
                                     data-dir="/foo">Reporte de salida</a>
                             </div>
                         </div>
