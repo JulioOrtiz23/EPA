@@ -1,2 +1,5 @@
-#cambiar pagina de inicio por defecto
-DirectoryIndex Public/index.php
+Options All -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
