@@ -9,6 +9,10 @@
     width: 70% !important;
 }
 
+.menu-right{
+    margin-left: 25%;
+}
+
 /*-------LOGIN STARTS HERE -------*/
 
 
@@ -174,15 +178,6 @@ input:focus {
     outline: none;
 }
 
-.heading-section{
-    margin-top: 10% !important;
-}
-
-.title{
-    color:#27509b !important;
-    font-weight: bold;
-}
-
 /*---------- CARDS --------*/
 
 .titulo-carta{
@@ -201,7 +196,6 @@ input:focus {
     text-align: center;
 }
 
-
 /*------------------------- FOOTER -------------------------*/
 
 footer{
@@ -213,4 +207,11 @@ footer{
     font-weight: bold;
     margin-top: 1%;
     text-align: center;
+}
+
+/*CSS para paginas de CRUD*/
+
+.CRUDHeader{
+    color: #000000 !important;
+    font-weight: bold !important;
 }

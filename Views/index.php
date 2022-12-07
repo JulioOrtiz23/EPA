@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row">
                 <div class="col-lg-12">
-                    <div class="heading-section" align="center">
+                    <div class="heading-section mt-5" align="center">
                         <h4 class="title">Super ofertas</h4>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 <?php
-const base_url = "http://localhost/EpaN/";
+date_default_timezone_set('America/El_Salvador');
+const base_url = "http://localhost/Epa/";
 const host = "localhost";
 const user = "root";
 const pass = "";
