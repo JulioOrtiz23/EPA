@@ -21,12 +21,15 @@ class Login extends Controller
             //$hash = hash("SHA256", $clave);
             $data = $this->model->getUsuarioLogin($usuario, $clave);
             if ($data) {
-                
+                if ($data['ESTADO_USUARIO'] == 1){
                     $_SESSION['id'] = $data['ID_USUARIO'];
                     $_SESSION['user'] = $data['NOMBRE_USUARIO'];
                     $_SESSION['activo'] = true;
                     $msg = "ok";
-                
+                }
+                else {
+                    $msg = "Usuario inactivo";
+                }
             } else {
                 $msg = "Usuario o password incorrecto";
             }

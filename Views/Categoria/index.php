@@ -1,5 +1,4 @@
 <?php include "Views/Template/header.php" ?>
-
 	<!-- ***** Area de tabla start ***** -->
 
 	<div class="container-sm">
@@ -14,35 +13,43 @@
 	<br>
 
 	<div class="container">
-		<table class="table table-bordered">
-			<thead class="table-light">
-				<input type="text" name="catNueva" placeholder="Categoria nueva">
-				<a href="" class="btn btn-success" style="margin-left:60px">Ingrese Categoria</a>
-				<br><br>
-				<tr>
-					<th class="text-center" scope="col">Id</th>
-					<th class="text-center" scope="col">Nombre de Categoria</th>
-					<th class="text-center" scope="col">Acciones</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="table-primary">
-					<th class="text-center" scope="row">1</th>
-					<th class="text-center" scope="row">2</th>
-					<th class="text-center">
-						<a class="btn btn-warning" href="" aria-label="Edit">
-							<i class="fa fa-pencil" aria-hidden="true"></i>
-						</a>
-						<a class="btn btn-danger" href="" aria-label="Delete">
-							<i class="fa fa-trash" aria-hidden="true"></i>
-						</a>
-					</th>
-				</tr>
-			</tbody>
-		</table>
+		<div class="row">
+			<div class="card w-100 ml-3 p-4">
+				<h2 class="CRUDHeader ml-3 mb-4">Agregar</h2>
+				<form id="frmCategoria">
+					<div class="form-row ml-2">
+						<input type="hidden" class="form-control" id="txtIdCategoria" name="txtIdCategoria" placeholder="ID Categoria" >
+						<div class="col-md-3">
+							<input type="text" class="form-control" id="txtNomCategoria" name="txtNomCategoria" placeholder="Nombre de Categoría">
+						</div>
+						<div class="col">
+							<button type="submit" class="btn btn-primary mb-2 ml-3" onclick="agregarCate(event);">Enviar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br><br>
+		<div class="card">
+			<div class="card-body">
+				<table class="table table-bordered table-sm mt-2 table-hover" id="tblDetalleCate">
+					<thead class="table-light">
+						<tr>
+							<th>ID Categoria</th>
+							<th>Nombre de Categoria</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 
-	<?php include "Views/Template/script.php" ?>
+<?php include "Views/Template/script.php" ?>
 <!-- colocar los js especificos para esta vista -->
-
+<script src="<?php echo base_url; ?>Assets/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url; ?>Assets/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url; ?>Assets/DataTables/datatables.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url; ?>Assets/custom-js/categoria.js"></script>
 <?php include "Views/Template/footer.php" ?>

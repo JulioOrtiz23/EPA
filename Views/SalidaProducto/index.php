@@ -22,49 +22,57 @@
 </div>
 <br>
 <div class="container">
-    <table class="table table-bordered">
-        <thead class="table-light">
-            <input type="text" name="producto" placeholder="Nombre del producto">
-            <input type="text" name="cantidad" placeholder="Cantidad" style="margin-left:60px">
-            <br>
-            <br>
-            <input type="dropzone" name="marca" placeholder="Marca del producto">
-            <input type="text" name="categoria" placeholder="Categoria del producto" style="margin-left:60px">
-            <a href="" class="btn btn-success" style="margin-left:60px">Agregar</a>
-            <br><br>
-            <tr>
-                <th class="text-center" scope="col">Nombre Producto</th>
-                <th class="text-center" scope="col">Marca</th>
-                <th class="text-center" scope="col">Cantidad</th>
-                <th class="text-center" scope="col">Categoria</th>
-                <th class="text-center" scope="col">Fecha de ingreso</th>
-                <th class="text-center" scope="col">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="table-primary">
-                <th class="text-center" scope="row">1</th>
-                <th class="text-center" scope="row">2</th>
-                <th class="text-center" scope="row">3</th>
-                <th class="text-center" scope="row">4</th>
-                <th class="text-center" scope="row">5</th>
-                <th class="text-center">
-                    <a class="btn btn-warning" href="" aria-label="Edit">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-danger" href="" aria-label="Delete">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                    </a>
-                </th>
-            </tr>
-        </tbody>
-    </table>
-    <div class="container">
-        <a href="" class="btn btn-success">Generar salida de Productos</a>
+    <div class="row">
+        <div class="card w-100 ml-3 p-4 pb-5">
+            <h2 class="CRUDHeader ml-3 mb-4">Agregar</h2>
+            <form id="frmProductos">
+                <div class="form-row ml-2">
+                    <div class="col-md-4">
+                        <select id="cboProducts" class="form-control" name="cboProducts">
+                            <option>Seleccione un producto</option>
+                            <?php foreach ($data['productos'] as $row) { ?>
+                            <option value="<?php echo $row['ID_PRODUCTO'] ?>"><?php echo $row['NOMBRE_PRODUCTO'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <input id="txtCantidadSalida" class="form-control" type="number" name="txtCantidadSalida" placeholder="Cantidad">
+                    </div>
+                    <div class="col ml-2">
+                        <button class="btn btn-primary" type="button" onclick="salidaProd(event);">Agregar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <br><br>
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Id</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody id="tblDetalleSalida"></tbody>
+            </table>
+        </div>
+    </div>
+    <button class="btn btn-primary mt-5" type="button" onclick="generarSalida();">Aplicar Entrega</button>
 </div>
 
 <?php include "Views/Template/script.php" ?>
 <!-- colocar los js especificos para esta vista -->
-
+<script src="<?php echo base_url; ?>Assets/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url; ?>Assets/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url; ?>Assets/DataTables/datatables.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url; ?>Assets/custom-js/producto.js"></script>
+<!-- <script>
+$(document).ready(function() {
+    $('#cboProducts').select2();
+});
+</script>-->
 <?php include "Views/Template/footer.php" ?>

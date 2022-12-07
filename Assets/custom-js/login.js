@@ -24,10 +24,7 @@ function Login(e) {
           window.location = base_url + "Inicio";
         } else {
           //si el usuario o pass es incorrecta se ejecuta este codigo
-          //quita el display none para que se muestre el mensaje (d-none es para ocultar)
-          document.getElementById("alerta").classList.remove("d-none");
-          //se le asigna la respuesta
-          document.getElementById("alerta").innerHTML = rpt;
+          Swal.fire("error!", rpt, "error");
         }
       }
     };

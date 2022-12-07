@@ -26,43 +26,48 @@
 <br>
 
 <div class="container">
-    <input type="text" name="producto" placeholder="Nombre del producto">
-    <input type="text" name="cantidad" placeholder="Cantidad" style="margin-left:60px">
-    <br><br>
-    <input type="dropzone" name="marca" placeholder="Marca del producto">
-    <input type="text" name="categoria" placeholder="Categoria del producto" style="margin-left:60px">
-    <a href="" class="btn btn-success" style="margin-left:60px">Agregar</a>
+    <div class="row">
+        <div class="card w-100 ml-3 p-4 pb-5">
+            <h2 class="CRUDHeader ml-3 mb-4">Agregar</h2>
+            <form id="frmProduct">
+                <div class="form-row ml-2">
+                    <div class="col-md-4">
+                        <select id="cboProducto" class="form-control" name="cboProducto">
+                            <option>Seleccione un producto</option>
+                            <?php foreach ($data['productos'] as $row) { ?>
+                            <option value="<?php echo $row['ID_PRODUCTO'] ?>"><?php echo $row['NOMBRE_PRODUCTO'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="txtCantidad" name="txtCantidad" placeholder="Cantidad">
+                    </div>
+                    <div class="col ml-2">
+                        <button class="btn btn-primary" type="button" onclick="agregarProd(event);">Agregar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <br><br>
     <div class="card">
         <div class="card-body">
-            <table class="table table-bordered table-sm mt-2 table-hover" id="tblProducto">
+            <table class="table table-bordered table-sm mt-2 table-hover">
                 <thead class="table-light">
                     <tr>
-                        <th>ID</th>
+                        <th>ID Producto</th>
                         <th>Producto</th>
-                        <th>Descripción</th>
-                        <th>Categoria</th>
-                        <th>Marca</th>
+                        <th>Cantidad</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
+                <tbody id="tblDetalle"></tbody>
             </table>
         </div>
     </div>
 
-    <div class="container">
-        <a href="" class="btn btn-success">Ingresar Productos</a>
-    </div>
+    <button class="btn btn-primary mt-5" type="button" onclick="generarEntrada();">Generar Recepción</button>
+    
 </div>
 
 <?php include "Views/Template/script.php" ?>
